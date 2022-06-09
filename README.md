@@ -38,5 +38,5 @@ django-admin startproject projectName
 ```
 
 This command will invoke the django-admin.py script, which will set up a new Django project
-called tango_with_django_project for you.
+called projectName for you.
 
