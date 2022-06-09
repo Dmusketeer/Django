@@ -84,3 +84,19 @@ development server.
 
 
 **Note :**stop the development server -- CRTL + C
+
+
+## Creating a Django Application
+
+- A Django project is a collection of configurations and applications that together make up a given
+Web application or website.
+- A Django application exists to perform a particular task. You need to create specific applications that
+are responsible for providing your site with particular kinds of functionality
+
+To create the application sangoApp run the following command.
+
+```python
+python manage.py startapp sangoApp
+```
+
+
