@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 def about(request):
-    return HttpResponse("<h1>Hey You Are on About page <h1/>")
+    template=loader.get_template('about.html')
+    return HttpResponse(template.render())
 
-    
