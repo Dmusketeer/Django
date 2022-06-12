@@ -22,3 +22,7 @@ def addrecord(request):
     about=About(firstname=x,lastname=y).save()
     return HttpResponseRedirect(reverse('about'))
 
+def delete(request,id):
+    about= About.objects.get(id=id)
+    about.delete()
+    return HttpResponseRedirect(reverse('about'))
