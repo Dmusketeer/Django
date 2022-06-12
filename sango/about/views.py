@@ -26,3 +26,25 @@ def delete(request,id):
     about= About.objects.get(id=id)
     about.delete()
     return HttpResponseRedirect(reverse('about'))
+
+def update(request,id):
+    about=About.objects.get(id=id)
+    template=loader.get_template('update.html')
+    context={
+        "about":about,
+    }
+    return HttpResponse(template.render(context,request))
+
+def updaterecord(request,id):
+    first=request.POST['first']
+    last=request.POST['last']
+    about= About.objects.get(id=id)
+    about.firstname=first
+    about.lastname=last
+    about.save()
+    return HttpResponseRedirect(reverse('about'))
+
+    
+
+
+
