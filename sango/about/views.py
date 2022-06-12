@@ -5,9 +5,9 @@ from .models import About
 
 def about(request):
     frnds=About.objects.all().values()
-    output=''
-    for x in frnds:
-        output+=x["firstname"]
-    return HttpResponse(f'<h1>{output[0:7]}<h1/>')
-
+    template = loader.get_template('about.html')
+    context = {
+    'frnds': frnds,
+  } 
+    return HttpResponse(template.render(context,request))
 

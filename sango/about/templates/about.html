@@ -7,10 +7,16 @@
     <title>About Page</title>
   </head>
   <body>
-    <div style="background-color:coral">
-        <h1>This is About Page</h1>
-        <a href="#">Home Page</a>
-    </div>
+    <h1>About</h1>
+    <table border="1">
+        {% for i in frnds %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.firstname }}</td>
+            <td>{{ i.lastname }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 
   </body>
 </html>
