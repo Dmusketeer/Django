@@ -28,6 +28,14 @@ exit()
 
 django-admin --version
 ```
+
+
+```python
+
+django-admin
+
+```
+
 **Note:** we can also use quit() to exit python interpreter
 
 check packages installed in vertual envirnoment:
@@ -39,7 +47,7 @@ pip list
 
 ```python
 django-admin startproject sango
-
+```
 This command will invoke the django-admin.py script, which will set up a new Django project
 called sango for you.
 
